@@ -123,5 +123,5 @@ if ( "serviceWorker" in navigator ) {
             console.log("Service Worker registrado com sucesso!");
         })
 } else {
-    alert("Seu navegador não possui suporte a Service Worker, por favor, atualize!");
+    alert("Seu navegador não possui suporte a Service Worker, por favor, atualizedd!");
 }

@@ -14,3 +14,28 @@ create table tbproduto(
     constraint pk_tbproduto primary key(procodigo, catcodigo),
     constraint fk_tbcategoria foreign key (catcodigo) references tbategoria(catcodigo)
 );
+
+
+INSERT INTO public.tbategoria(
+	catcodigo, catdescricao)
+	VALUES (1, 'fogao');
+    
+    INSERT INTO public.tbategoria(
+	catcodigo, catdescricao)
+	VALUES (2, 'geladeira');
+    
+    INSERT INTO public.tbategoria(
+	catcodigo, catdescricao)
+	VALUES (3, 'forno');
+    
+    INSERT INTO public.tbategoria(
+	catcodigo, catdescricao)
+	VALUES (4, 'microondas');
+
+    INSERT INTO public.tbproduto(
+	procodigo, prodescricao, provalor, catcodigo)
+	VALUES (1, 'geladeira 1', 10000, 1);
+    
+    INSERT INTO public.tbproduto(
+	procodigo, prodescricao, provalor, catcodigo)
+	VALUES (2, 'geladeira 2', 20000, 1);
