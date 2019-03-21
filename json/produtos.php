@@ -6,29 +6,26 @@
 	if ( isset ( $_GET["op"] ) ) $op = trim ( $_GET["op"] );
 
 	if ( empty ( $op ) ) {
-		$sql = "select * from produto";
+		$sql = "select * from tbproduto";
 		$res = $pdo->prepare($sql);	
 	} else if ( $op == "busca") {
 		$palavra = trim ( $_GET["palavra"] );
 		$palavra = "%$palavra%";
 
-		$sql = "select * from produto where nome like ? ";
+		$sql = "select * from tbproduto where prodescricao like ? ";
 		$res = $pdo->prepare($sql);
 		$res->bindParam(1, $palavra);
-	} else if ( $op == "destaques") {
-		$sql = "select * from produto where destaque = 'S' order by rand() limit 4";
-		$res = $pdo->prepare($sql);
-	} else if ( $op == "produto") {
+	} else if ( $op == "tbproduto") {
 		$id = $_GET["id"];
-		$sql = "select * from produto where id = ? ";
+		$sql = "select * from tbproduto where procodigo = ? ";
 		$res = $pdo->prepare($sql);
 		$res->bindParam(1, $id);
 
 	} else if ( $op == "categoria") {
 		$id = $_GET["id"];
-		$sql = "select p.*, c.nome categoria from produto p
-		inner join categoria c on (c.id = p.categoria_id)
-		where p.categoria_id = ? ";
+		$sql = "select p.*, c.nome categoria from tbproduto p
+		inner join tbcategoria c on (c.id = p.catcodigo)
+		where p.catcodigo = ? ";
 		$res = $pdo->prepare($sql);
 		$res->bindParam(1, $id);
 	}

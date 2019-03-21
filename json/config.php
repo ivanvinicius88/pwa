@@ -5,7 +5,7 @@ error_reporting(E_ALL);
 
 try {
     $servidor = "localhost"; //localhost, ip ou host
-    $banco = "api_ecommerce"; //nome do banco de dados
+    $banco = "akiexpress"; //nome do banco de dados
     $usuario = "root"; //usuario
     $senha = ""; //senha de conexao
     $pdo = new PDO ("mysql:host=$servidor;dbname=$banco;charset=utf8","$usuario","$senha");
