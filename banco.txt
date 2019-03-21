@@ -1,0 +1,16 @@
+create database trabalhopwa;
+
+create table tbategoria(
+    catcodigo integer not null,
+    catdescricao varchar(40) not null,
+    constraint pk_tbcategoria primary key (catcodigo)
+);
+
+create table tbproduto(
+    procodigo integer not null,
+    prodescricao varchar(100) not null,
+    provalor bigint not null,
+    catcodigo integer not null,
+    constraint pk_tbproduto primary key(procodigo, catcodigo),
+    constraint fk_tbcategoria foreign key (catcodigo) references tbategoria(catcodigo)
+);
