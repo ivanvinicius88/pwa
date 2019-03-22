@@ -1,6 +1,6 @@
 create database trabalhopwa;
 
-create table tbategoria(
+create table tbcategoria(
     catcodigo integer not null,
     catdescricao varchar(40) not null,
     constraint pk_tbcategoria primary key (catcodigo)
@@ -18,24 +18,24 @@ create table tbproduto(
 
 INSERT INTO public.tbategoria(
 	catcodigo, catdescricao)
-	VALUES (1, 'fogao');
+	VALUES (1, 'Fogao');
     
     INSERT INTO public.tbategoria(
 	catcodigo, catdescricao)
-	VALUES (2, 'geladeira');
+	VALUES (2, 'Geladeira');
     
     INSERT INTO public.tbategoria(
 	catcodigo, catdescricao)
-	VALUES (3, 'forno');
+	VALUES (3, 'Forno');
     
     INSERT INTO public.tbategoria(
 	catcodigo, catdescricao)
-	VALUES (4, 'microondas');
+	VALUES (4, 'Microondas');
 
     INSERT INTO public.tbproduto(
 	procodigo, prodescricao, provalor, catcodigo)
-	VALUES (1, 'geladeira 1', 10000, 1);
+	VALUES (1, 'Geladeira 1', 10000, 1);
     
     INSERT INTO public.tbproduto(
 	procodigo, prodescricao, provalor, catcodigo)
-	VALUES (2, 'geladeira 2', 20000, 1);
+	VALUES (2, 'Geladeira 2', 20000, 1);

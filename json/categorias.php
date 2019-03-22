@@ -3,12 +3,12 @@
 
 	include "config.php";
 
-	$sql = "select * from tbcategoria order by catcodigo ";
+	$sql = "select * from tbcategoria";
 	$res = $pdo->prepare($sql);
 	$res->execute();
 	while ($d = $res->fetch(PDO::FETCH_OBJ)) {
-		$d->slug = slugify($d->nome);
-		$dados[$d->id] = $d;
+		$d->slug = slugify($d->catdescricao);
+		$dados[$d->catcodigo] = $d;
 	}
 
 	echo json_encode($dados);

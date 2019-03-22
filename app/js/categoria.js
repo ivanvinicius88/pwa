@@ -3,7 +3,6 @@ $(document).ready(function() {
     console.log( id );
 
     var categoria = localStorage.getItem("categoria"+id);
-
     if ( categoria ) {
 
         console.log("Produtos do Cache");
@@ -12,7 +11,6 @@ $(document).ready(function() {
         preencher( dados );
 
     } else {
-
         //buscar os produtos em destaque
         $.getJSON("http://localhost/pwa/json/produtos.php?op=categoria&id="+id,
             function() {

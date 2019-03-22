@@ -51,7 +51,7 @@ $(document).ready( function (){
     function preencherCategoria ( dados ) {
         $("#msg").html("");
         $.each( dados, function ( key, val ) {
-            $(".navbar-nav").prepend("<li><a href='categorias.html?id="+val.id+"'>"+val.nome+"</a></li>");
+            $(".navbar-nav").prepend("<li><a href='categorias.html?id="+val.catcodigo+"'>"+val.catdescricao+"</a></li>");
         })
     }
 
@@ -63,29 +63,6 @@ $(document).ready( function (){
     $(".logar").click(function(){
         $("#login").show("fast");
         $("#email").focus();
-    })
-    //funcao para validar o login
-    $(".btn-logar").click(function(){
-        //pegar os dados do formulario
-        var email = $("#email").val();
-        var senha = $("#senha").val();
-
-        $.post(
-            "http://localhost/pwa/json/login.php",
-            {email:email,senha:senha},
-            function (dados) {
-                var msg = dados.split(";");
-                if ( msg[0] == "erro" ) {
-                    alert(msg[1]);
-                } else {
-                    localStorage.setItem("email",email);
-                    sessionStorage.setItem("id",msg[1]);
-                    sessionStorage.setItem("nome",msg[2]);
-                    //redirecionar p pagina principal
-                    location.href = "index.html";
-                }
-
-        })
     })
     
     //funcao para sair
