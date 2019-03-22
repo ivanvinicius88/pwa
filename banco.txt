@@ -12,30 +12,30 @@ create table tbproduto(
     provalor bigint not null,
     catcodigo integer not null,
     constraint pk_tbproduto primary key(procodigo, catcodigo),
-    constraint fk_tbcategoria foreign key (catcodigo) references tbategoria(catcodigo)
+    constraint fk_tbcategoria foreign key (catcodigo) references tbcategoria(catcodigo)
 );
 
 
-INSERT INTO public.tbategoria(
+INSERT INTO tbcategoria(
 	catcodigo, catdescricao)
 	VALUES (1, 'Fogao');
     
-    INSERT INTO public.tbategoria(
+    INSERT INTO tbcategoria(
 	catcodigo, catdescricao)
 	VALUES (2, 'Geladeira');
     
-    INSERT INTO public.tbategoria(
+    INSERT INTO tbcategoria(
 	catcodigo, catdescricao)
 	VALUES (3, 'Forno');
     
-    INSERT INTO public.tbategoria(
+    INSERT INTO tbcategoria(
 	catcodigo, catdescricao)
 	VALUES (4, 'Microondas');
 
-    INSERT INTO public.tbproduto(
+    INSERT INTO tbproduto(
 	procodigo, prodescricao, provalor, catcodigo)
 	VALUES (1, 'Geladeira 1', 10000, 1);
     
-    INSERT INTO public.tbproduto(
+    INSERT INTO tbproduto(
 	procodigo, prodescricao, provalor, catcodigo)
 	VALUES (2, 'Geladeira 2', 20000, 1);
