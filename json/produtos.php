@@ -23,8 +23,8 @@
 
 	} else if ( $op == "categoria") {
 		$id = $_GET["id"];
-		$sql = "select p.*, c.nome categoria from tbproduto p
-		inner join tbcategoria c on (c.id = p.catcodigo)
+		$sql = "select p.*, c.catdescricao categoria from tbproduto p
+		inner join tbcategoria c on (c.catcodigo = p.catcodigo)
 		where p.catcodigo = ? ";
 		$res = $pdo->prepare($sql);
 		$res->bindParam(1, $id);
@@ -32,10 +32,10 @@
 
 	$res->execute();
 	while ($d = $res->fetch(PDO::FETCH_OBJ)) {
-		$d->imagem = "<img src='../imgs/".$d->imagem."' class='img'>";
-		$d->slug = slugify($d->nome);
-		$d->valor = number_format($d->valor,2,",",".");
-		$dados[$d->id] = $d;
+		//$d->imagem = "<img src='../imgs/".$d->imagem."' class='img'>";
+		$d->slug = slugify($d->prodescricao);
+		$d->provalor = number_format($d->provalor,2,",",".");
+		$dados[$d->procodigo] = $d;
 	}
 
 	if ( !isset($dados) ) $dados= "";
