@@ -45,7 +45,7 @@ function preencherProduto(dados) {
             img = "<img src='https://images-na.ssl-images-amazon.com/images/I/81NNgzboHhL._SX425_.jpg' alt='microondas'>" ;
         }
         $(".foto").html(img);
-        $(".descricao").html("<p>"+val.prodescricao+"</p><p class='text-center'><a href='carrinho.html?op=add' class='btn btn-danger btn-lg'>Comprar</a></p>");
+        $(".descricao").html("<p>"+val.prodescricao+"</p><p class='text-center'><a href='categorias.html?id="+ val.catcodigo +"' class='btn btn-danger btn-lg'>Voltar</a></p>");
         $("h1").html(val.prodescricao);
     })
 }
