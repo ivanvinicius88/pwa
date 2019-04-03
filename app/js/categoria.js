@@ -30,6 +30,7 @@ $(document).ready(function() {
     function preencher( dados ) {
         var img = '';
 
+<<<<<<< HEAD
 
         if(dados != ""){
             var iCodigoCategoria = dados[1]['catcodigo'];
@@ -53,10 +54,6 @@ $(document).ready(function() {
 
         $.each( dados, function( id = key, val ) {
             dados[id]['catcodigo']
-
-
-
-            
             $(".row").append("<div class='col-md-6 col-sm-6 text-center'><div class='thumbnail'>" + img + "<p>"+val.prodescricao+"</p><p class='valor'>"+val.provalor+"</p><a href='produto.html?id="+val.procodgio+"' class='btn btn-danger'>Detalhes</a></div></div>");
         })
         $("#msg").html("");

@@ -15,7 +15,7 @@
 		$sql = "select * from tbproduto where prodescricao like ? ";
 		$res = $pdo->prepare($sql);
 		$res->bindParam(1, $palavra);
-	} else if ( $op == "tbproduto") {
+	} else if ( $op == "produto") {
 		$id = $_GET["id"];
 		$sql = "select * from tbproduto where procodigo = ? ";
 		$res = $pdo->prepare($sql);

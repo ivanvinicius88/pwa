@@ -10,7 +10,6 @@ $(document).ready(function() {
         localStorage.setItem("produto"+id, JSON.stringify(dados) );
         preencherProduto(dados);
     } else {
-        debugger;
         $.getJSON("http://localhost/pwa/json/produtos.php?op=produto&id="+id, function(){
         }).done( function ( dados )  {
             console.log("Armazenando produto no cache");
@@ -23,7 +22,6 @@ $(document).ready(function() {
 })
     
 function preencherProduto(dados) {
-    debugger;
     $.each( dados, function ( key, val )  {
        // $(".foto").html(val.imagem);
         $(".descricao").html("<p>"+val.prodescricao+"</p><p class='text-center'><a href='carrinho.html?op=add' class='btn btn-danger btn-lg'>Comprar</a></p>");
