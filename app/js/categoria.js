@@ -53,7 +53,7 @@ $(document).ready(function() {
                 img = "<img src='https://images-na.ssl-images-amazon.com/images/I/81NNgzboHhL._SX425_.jpg' alt='microondas'>" ;
             }
 
-            $(".row").append("<div class='col-md-6 col-sm-6 text-center'><div class='thumbnail'>" + img + "<p>"+val.prodescricao+"</p><p class='valor'>"+val.provalor+"</p><a href='produto.html?id="+val.procodigo+"' class='btn btn-danger'>Detalhes</a></div></div>");
+            $(".row").append("<div class='col-md-6 col-sm-6 text-center'><div class='thumbnail'>" + img + "<p>"+val.prodescricao+"</p><p class=' text-primary'>"+val.provalor+"</p><a href='produto.html?id="+val.procodigo+"' class='btn btn-primary'>Detalhes</a></div></div>");
         })
         $("#msg").html("");
     }
