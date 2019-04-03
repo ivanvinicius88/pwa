@@ -39,7 +39,7 @@ function preencherProduto(dados) {
 
         if(iCodigoCategoria == 3){
             img = "<img src='https://a-static.mlcdn.com.br/618x463/forno-eletrico-philco-46l-com-timer/magazineluiza/216448600/295228559ec6ff61dfb31ada1b2370d0.jpg' alt='forno'>" ;
-        }
+        }//ddd
 
         if(iCodigoCategoria == 4){
             img = "<img src='https://images-na.ssl-images-amazon.com/images/I/81NNgzboHhL._SX425_.jpg' alt='microondas'>" ;
