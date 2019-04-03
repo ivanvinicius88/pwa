@@ -42,7 +42,7 @@ $(document).ready(function() {
                 var img = "<img src='https://casaevideodigital.vteximg.com.br/arquivos/ids/158923-1000-1000/1462490c.jpg?v=636692645095430000'></img>";
             }
             //adicionar os itens no .row
-            $(".row").append("<div class='col-md-6 col-sm-6 text-center'><div class='thumbnail'>"+ img + "<p>"+val.prodescricao+"</p><p class='valor'>"+val.provalor+"</p><a href='produto.html?id="+val.procodgio+"' class='btn btn-danger'>Detalhes</a></div></div>");
+            $(".row").append("<div class='col-md-6 col-sm-6 text-center'><div class='thumbnail'>"+ img + "<p>"+val.prodescricao+"</p><p class='valor'>"+val.provalor+"</p><a href='produto.html?id="+val.procodigo+"' class='btn btn-danger'>Detalhes</a></div></div>");
         })
         $("#msg").html("");
     }
