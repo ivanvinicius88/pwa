@@ -1,7 +1,7 @@
 {
-	"name":"Akiexpress - Sua loja de Lontras",
-	"short_name":"Akiexpress",
-	"description":"E-commerce de eletrônicos de Lontras",
+	"name":"TopStore - Sua loja digital",
+	"short_name":"TopStore",
+	"description":"E-commerce de eletrônicos",
 	"orientation":"portrait",
 	"background_color":"#F1F1F1",
 	"theme_color":"#F00",
@@ -9,15 +9,15 @@
 	"start_url":"/app/index.html",
 	"icons": [
 		{
-			"src":"imgs/icon-256.png",
+			"src":"imgs/icon-222.png",
 			"type":"image/png",
 			"sizes":"256x256"
 		},{
-			"src":"imgs/icon-196.png",
+			"src":"imgs/icon-222.png",
 			"type":"image/png",
 			"sizes":"196x196"
 		},{
-			"src":"imgs/icon-144.png",
+			"src":"imgs/icon-222.png",
 			"type":"image/png",
 			"sizes":"144x144"
 		}

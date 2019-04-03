@@ -1,5 +1,5 @@
 //nome do cache
-var cacheName = 'akiexpress';
+var cacheName = 'topstore';
 
 //arquivos a serem cacheados
 var filesToCache = [

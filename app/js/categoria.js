@@ -30,8 +30,19 @@ $(document).ready(function() {
     function preencher( dados ) {
 
         $.each( dados, function( key, val ) {
+            if(val.catcodigo == 1) {
+                var img = "<img src='https://casaevideodigital.vteximg.com.br/arquivos/ids/158923-1000-1000/1462490c.jpg?v=636692645095430000'></img>";
+            } else if(val.catcodigo == 2) {
+                var img = "<img src='https://casaevideodigital.vteximg.com.br/arquivos/ids/158923-1000-1000/1462490c.jpg?v=636692645095430000'></img>";
+            }
+            else if(val.catcodigo == 3) {
+                var img = "<img src='https://casaevideodigital.vteximg.com.br/arquivos/ids/158923-1000-1000/1462490c.jpg?v=636692645095430000'></img>";
+            }
+            else if(val.catcodigo == 4) {
+                var img = "<img src='https://casaevideodigital.vteximg.com.br/arquivos/ids/158923-1000-1000/1462490c.jpg?v=636692645095430000'></img>";
+            }
             //adicionar os itens no .row
-            $(".row").append("<div class='col-md-6 col-sm-6 text-center'><div class='thumbnail'>"+val.imagem+"<p>"+val.nome+"</p><p class='valor'>"+val.valor+"</p><a href='produto.html?id="+val.id+"' class='btn btn-danger'>Detalhes</a></div></div>");
+            $(".row").append("<div class='col-md-6 col-sm-6 text-center'><div class='thumbnail'>"+ img + "<p>"+val.prodescricao+"</p><p class='valor'>"+val.provalor+"</p><a href='produto.html?id="+val.procodgio+"' class='btn btn-danger'>Detalhes</a></div></div>");
         })
         $("#msg").html("");
     }
