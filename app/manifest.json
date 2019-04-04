@@ -7,7 +7,25 @@
 	"theme_color":"#F00",
 	"display":"standalone",
 	"start_url":"/app/index.html",
+<<<<<<< HEAD
 	"icons": [],
+=======
+	"icons": [
+		{
+			"src":"imgs/icon-256.png",
+			"type":"image/png",
+			"sizes":"256x256"
+		},{
+			"src":"imgs/icon-196.png",
+			"type":"image/png",
+			"sizes":"196x196"
+		},{
+			"src":"imgs/icon-144.png",
+			"type":"image/png",
+			"sizes":"144x144"
+		}
+	],
+>>>>>>> c21d7cd3bb7a958eedb0edcd61119e1820e5ab04
 	"use_cache":"true",
 	"appcache_path":"cache.manifest"
 }

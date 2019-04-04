@@ -39,13 +39,13 @@ function preencherProduto(dados) {
 
         if(iCodigoCategoria == 3){
             img = "<img src='https://a-static.mlcdn.com.br/618x463/forno-eletrico-philco-46l-com-timer/magazineluiza/216448600/295228559ec6ff61dfb31ada1b2370d0.jpg' alt='forno'>" ;
-        }
+        }//ddd
 
         if(iCodigoCategoria == 4){
             img = "<img src='https://images-na.ssl-images-amazon.com/images/I/81NNgzboHhL._SX425_.jpg' alt='microondas'>" ;
         }
         $(".foto").html(img);
-        $(".descricao").html("<p>"+val.prodescricao+"</p><p class='text-center'><a href='carrinho.html?op=add' class='btn btn-primary btn-lg'>Comprar</a></p>");
+        $(".descricao").html("<p>"+val.prodescricao+"</p><p class='text-center'><a href='categorias.html?id="+ val.catcodigo +"' class='btn btn-danger btn-lg'>Voltar</a></p>");
         $("h1").html(val.prodescricao);
     })
 }

@@ -10,6 +10,12 @@ js/buscar.js
 js/categoria.js
 css/bootstrap.min.css
 css/style.css
+<<<<<<< HEAD
+=======
+imgs/icon-256.png
+imgs/icon-196.png
+imgs/icon-144.png
+>>>>>>> c21d7cd3bb7a958eedb0edcd61119e1820e5ab04
 imgs/logo.png
 imgs/load.gif
 index.html
