@@ -3,6 +3,7 @@ $(document).ready(function() {
     console.log( id );
 
     var categoria = localStorage.getItem("categoria"+id);
+    
     if ( categoria ) {
 
         console.log("Produtos do Cache");
