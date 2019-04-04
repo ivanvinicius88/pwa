@@ -46,6 +46,6 @@ function preencherProduto(dados) {
         }
         $(".foto").html(img);
         $(".descricao").html("<p>"+val.prodescricao+"</p><p class='text-center'><a href='categorias.html?id="+ val.catcodigo +"' class='btn btn-danger btn-lg'>Voltar</a></p>");
-        $("h1").html(val.prodescricao);
+        $("h1").html("<h1 class='text-center h1'>" + val.prodescricao + "</h1>");
     })
 }
