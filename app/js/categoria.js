@@ -1,9 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function() {    
     var id = retornaPagina();
-    console.log( id );
+
+    $(".cadastrarProduto").append("<a a href='cadastrarProduto.html?id="+id+"' class='btn btn-primary'>Cadastrar</a>")
 
     var categoria = localStorage.getItem("categoria"+id);
-    
+
     if ( categoria ) {
 
         console.log("Produtos do Cache");
@@ -30,7 +31,6 @@ $(document).ready(function() {
     //funcao para preencher os produtos
     function preencher( dados ) {
          
-        
         $.each( dados, function( id = key, val ) {
             var img = '';
             
